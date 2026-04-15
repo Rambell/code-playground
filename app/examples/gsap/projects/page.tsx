@@ -6,14 +6,14 @@ const projects = [
   {
     name: "Flowdesk",
     desc: "Landing de SaaS de productividad. Estilo minimalista light con animaciones de scroll, features y pricing.",
-    url: "http://localhost:3000",
+    url: "https://gsap-seven-delta.vercel.app/",
     tags: ["ScrollTrigger", "Timeline", "Text Reveal", "Stagger"],
     color: "#534AB7"
   },
   {
     name: "Nexus AI",
     desc: "Landing de startup de IA. Dark mode premium con cursor personalizado, text scramble y parallax.",
-    url: "http://localhost:3002",
+    url: "https://nexus-ai-five-sage.vercel.app/",
     tags: ["Cursor", "Magnetic", "Scramble", "Typewriter", "Parallax"],
     color: "#1D9E75"
   },
