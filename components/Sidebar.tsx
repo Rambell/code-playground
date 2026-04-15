@@ -5,22 +5,30 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 const nav = [
-  {
-    category: "CSS",
-    items: [
-      { label: "Transitions", path: "/examples/css/transitions" },
-      { label: "Animations", path: "/examples/css/animations" },
-    ]
-  },
-  {
-    category: "GSAP",
-    items: [
-      { label: "Tween", path: "/examples/gsap/tween" },
-      { label: "Timeline", path: "/examples/gsap/timeline" },
-      { label: "ScrollTrigger", path: "/examples/gsap/scrolltrigger" },
-      { label: "Contador", path: "/examples/gsap/contadores" },
-    ]
-  }
+    {
+        category: "CSS",
+        items: [
+            { label: "Transitions", path: "/examples/css/transitions" },
+            { label: "Animations", path: "/examples/css/animations" },
+            ]
+    },
+    {
+        category: "GSAP",
+        items: [
+            { label: "Tween", path: "/examples/gsap/tween" },
+            { label: "Timeline", path: "/examples/gsap/timeline" },
+            { label: "ScrollTrigger", path: "/examples/gsap/scrolltrigger" },
+            { label: "Contador", path: "/examples/gsap/contadores" },
+            { label: "Cursor", path: "/examples/gsap/cursor" },
+            { label: "Cursor Estela", path: "/examples/gsap/estela" },
+            { label: "Smooth Scroll", path: "/examples/gsap/smooth-scroll" },
+            { label: "Text Scramble", path: "/examples/gsap/text-scramble" },
+            { label: "Text Effects", path: "/examples/gsap/text-effects" },
+            { label: "Page Transitions", path: "/examples/gsap/page-transitions" },
+            { label: "Parallax", path: "/examples/gsap/parallax" },
+            { label: "Proyectos ejemplos", path: "/examples/gsap/projects" },
+        ]
+    },
 ]
 
 export default function Sidebar() {
