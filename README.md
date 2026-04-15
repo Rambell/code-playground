@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Code Playground 🎮
 
-## Getting Started
+Biblioteca interactiva de ejemplos de código con demos en vivo. Construida con Next.js, TypeScript y GSAP.
 
-First, run the development server:
+## Demo
+
+[Ver en vivo →](https://tu-url-en-vercel.vercel.app)
+
+## ¿Qué es esto?
+
+Un playground personal para aprender y referenciar efectos de animación web. Cada ejemplo muestra el demo funcionando en vivo y el código fuente lado a lado.
+
+## Ejemplos disponibles
+
+### CSS
+- **Transitions** → Transiciones suaves con cubic-bezier
+- **Animations** → Animaciones infinitas con @keyframes (float, pulse, spin)
+
+### GSAP
+- **Tween** → gsap.from(), gsap.to(), gsap.fromTo()
+- **Timeline** → Animaciones encadenadas con overlaps
+- **ScrollTrigger** → Animaciones activadas por scroll con scrub
+- **Contadores** → Números que suben al hacer scroll
+- **Cursor + Magnetic** → Cursor personalizado con lag y botones magnéticos
+- **Estela de colores** → Partículas de colores que siguen al cursor
+- **Smooth Scroll** → Scroll cinematográfico con interpolación
+- **Text Scramble** → Texto que se revela con caracteres aleatorios
+- **Page Transitions** → Transiciones entre páginas con overlay animado
+- **Text Effects** → Typewriter con cursor parpadeante + letras que caen
+- **Parallax** → Múltiples capas a distintas velocidades con el mouse
+
+### Proyectos
+- **Flowdesk** → Landing de SaaS de productividad (light mode)
+- **Nexus AI** → Landing de startup de IA (dark mode premium)
+
+## Stack
+
+- [Next.js 16](https://nextjs.org/) con App Router
+- [TypeScript](https://www.typescriptlang.org/)
+- [GSAP](https://gsap.com/) + ScrollTrigger
+- [Tailwind CSS](https://tailwindcss.com/)
+- [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+
+## Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/code-playground.git
+
+# Entrar al proyecto
+cd code-playground
+
+# Instalar dependencias
+npm install
+
+# Arrancar el servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura del proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx              → Layout principal con sidebar
+  page.tsx                → Página de inicio
+  projects/
+    page.tsx              → Galería de proyectos
+  examples/
+    css/
+      transitions/        → Ejemplo de CSS transitions
+      animations/         → Ejemplo de CSS animations
+    gsap/
+      tween/              → Ejemplo de GSAP tween
+      timeline/           → Ejemplo de GSAP timeline
+      scrolltrigger/      → Ejemplo de ScrollTrigger
+      contadores/         → Ejemplo de contadores animados
+      cursor/             → Ejemplo de cursor + magnetic buttons
+      estela/             → Ejemplo de estela de colores
+      smooth-scroll/      → Ejemplo de smooth scroll
+      text-scramble/      → Ejemplo de text scramble
+      page-transitions/   → Ejemplo de page transitions
+      text-effects/       → Ejemplo de typewriter + letras que caen
+      parallax/           → Ejemplo de parallax avanzado
+components/
+  Sidebar.tsx             → Navegación lateral
+  ExampleLayout.tsx       → Layout de cada ejemplo (demo + código)
+```
 
-## Learn More
+## Cómo agregar un nuevo ejemplo
 
-To learn more about Next.js, take a look at the following resources:
+1. Crea la carpeta en `app/examples/[tecnologia]/[nombre]/`
+2. Agrega `page.tsx` con el componente `ExampleLayout`
+3. Agrega el item en `components/Sidebar.tsx`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```tsx
+// Estructura básica de un ejemplo
+export default function MiEjemploPage() {
+  return (
+    <ExampleLayout
+      title="Nombre del ejemplo"
+      description="Descripción de qué hace y cuándo usarlo."
+      code={`// código aquí`}
+    >
+      <Demo />
+    </ExampleLayout>
+  )
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Roadmap
 
-## Deploy on Vercel
+- [ ] CSS avanzado → Grid animations, clip-path
+- [ ] GSAP
+- [ ] Más proyectos completos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Autor
+Matías Ramírez
